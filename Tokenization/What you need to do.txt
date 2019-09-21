@@ -1,0 +1,10 @@
+Learn setting up and fetching static content                     Learn how to store tokens or where are tokens stored for further use.
+READ PHOTOGRID CODE AND UNDERSTAND EVERY LINE OF IT
+Use ajax to fetch the posted data of the user and all that
+Use mongodb to  verify
+Implement better ways of JWT
+Use oAuth to verify,understand the standard way of doing it
+
+
+
+

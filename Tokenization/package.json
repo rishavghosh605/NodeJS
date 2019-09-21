@@ -1,0 +1,16 @@
+{
+  "name": "tokenization",
+  "version": "1.0.0",
+  "description": "A project to use Postman to check how JWT works",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "hogan-express": "^0.5.2",
+    "jsonwebtoken": "^8.5.1"
+  }
+}

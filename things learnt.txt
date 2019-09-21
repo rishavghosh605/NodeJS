@@ -1,0 +1,5 @@
+1) Inside the callback of a route if you have already executed res.send no further statements will be executed. res.send can be thought of as a return statement used in methods or functions
+
+2) Header keys arwe not case sensitive, that is all keys are converted to lower case:
+req.headers['authorization'] will read values of both:
+authorization:"a" and AuthoRizatioN:"a"

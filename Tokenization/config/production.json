@@ -1,0 +1,6 @@
+{
+	"host":"http://localhost:3000",
+	"S3AccessKey":"AKIAJSVIBIU4CWHIZIDQ",
+	"S3Secret":"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",
+	"S3Bucket":"photogridcloud"
+}

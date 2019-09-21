@@ -1,0 +1,29 @@
+1.If someone tries to manually access the routes then we must check if there is any session data for the person to wander off in into unknown routes to protect against it we can check omne of the req value if it is null then we can do one thing that is we can use an alert box to whic h says follow protocol and then we can redirect it to the main login site and if it is solved try to make it unique by relaying messages
+2.I need to stop the backbutton from being used
+3. Make Chat Bubbles
+4.Use bootsttrap
+5.Make it good enough to send images
+6. Make maam understand it is good enough for cloud that to store the app.locals.chatrooms we need a lot of cloud 
+7.Better function FindByRoomName by using reg ex
+8.Make a good looking my profile modal
+9.Make it more secure that is when we ask for user details when passing from room to chatroom page				
+
+Note: Understand how next and use works,
+how do rooms have a response object 
+
+
+For ML:learn how to implement unsupervised learning on tshirt sizing data
+
+Use game of thrones dataset to visualize
+
+
+
+dbms project
+image processing project 
+software course for additional learning 1
+competitive coding MUST
+coursera algorithms MUST
+college
+machine learning MUST
+python
+get to know about various api's and their uses

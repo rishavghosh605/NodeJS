@@ -1,0 +1,9 @@
+
+
+{
+	"host":"http://localhost:3000",
+	"S3AccessKey":"AKIAJSVIBIU4CWHIZIDQ",
+	"S3Secret":"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",
+	"S3Bucket":"photogridcloud",
+	"dbUrl" : "mongodb://photogrid:Zxcvbn123456@ds039427.mlab.com:39427/photogrid"
+}
