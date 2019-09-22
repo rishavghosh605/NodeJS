@@ -1,0 +1,14 @@
+{
+  "name": "expressdemo",
+  "version": "1.0.0",
+  "description": "A simple description on how to use node js",
+  "main": "Express.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Rishav",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
