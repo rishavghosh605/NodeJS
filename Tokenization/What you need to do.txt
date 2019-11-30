@@ -1,3 +1,17 @@
+Download working themes of login and signup and user dashboard
+Check out the public problem
+Implement passport js on  login or signup route 
+
+Display details using jwt and 
+
+
+
+
+
+
+
+
+
 Learn setting up and fetching static content                     Learn how to store tokens or where are tokens stored for further use.
 READ PHOTOGRID CODE AND UNDERSTAND EVERY LINE OF IT
 Use ajax to fetch the posted data of the user and all that

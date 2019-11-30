@@ -1,5 +1,5 @@
 module.exports=
-function(express,app,fs,os,formidable,gm,knoxClient,mongoose,io){
+function(express,app){
 
 //Creating a socket to basically display a status message
 var Sockets;
@@ -18,7 +18,7 @@ var singleImage = new mongoose.Schema({
 var singleImageModel = mongoose.model('singleImage',singleImage);
 
 router.get('/',function(req,res,next){
-	res.render('index',{host:app.get('host')});  
+	res.render('index',{host:app.get('host')});
 });
 
 router.post('/upload',function(req,res,next){
@@ -34,20 +34,20 @@ router.post('/upload',function(req,res,next){
 		}
 		return (fstring += date + '.' + ext);
 	}
-	var tmpFile,nfile,fname;//nfile will contain the complete path to the new file , fname will be used to generate a random filename to store in s3bucket, tmpFile will contain the complete path to the file that was uploaded  
+	var tmpFile,nfile,fname;//nfile will contain the complete path to the new file , fname will be used to generate a random filename to store in s3bucket, tmpFile will contain the complete path to the file that was uploaded
 	var newForm=new formidable.IncomingForm();//The file is recieved using the formidable module
 		newForm.keepExtensions=true;
 		newForm.parse(req,function(err,fields,files){
 			tmpFile = files.upload.path;
 			fname = generateFilename(files.upload.name);
-			nfile = os.tmpDir() + '/' + fname;//os.tmpDir() give access to the temporary directory where all the temporary files 
+			nfile = os.tmpDir() + '/' + fname;//os.tmpDir() give access to the temporary directory where all the temporary files
 			//are stored once they are recieved back at the server end
 			res.writeHead(200,{'Contet-type':'text/plain'});
 			res.end();
 		});
 
 		newForm.on('end', function(){
-			//The fs.rename function renames the uploaded file to its random name with the full path 
+			//The fs.rename function renames the uploaded file to its random name with the full path
 			//of the directory in the server where it is going to be stored
 			fs.rename(tmpFile, nfile, function(){
 				//Resize the image and upload this file into the S3Bucket
@@ -57,11 +57,11 @@ router.post('/upload',function(req,res,next){
 						var req = knoxClient.put(fname,{
 							'Contet-Length' : buf.length,
 							'Contet-Type' : 'image/jpeg'
-						}); 
+						});
 						req.on('response', function(res){
 							if(res.statusCode == 200){
 								//This means that the file is in the S3 bucket
-							
+
 								var newImage = new singleImageModel({
 									filename : fname,
 									votes : 0
@@ -79,8 +79,8 @@ router.post('/upload',function(req,res,next){
 
 						req.end(buf);
 					});
-				}); 
-			}); 
+				});
+			});
 		});
 
 });

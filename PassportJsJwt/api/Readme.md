@@ -1,0 +1,1 @@
+Create a mongodb model called userdb practice bhi ho jayega
